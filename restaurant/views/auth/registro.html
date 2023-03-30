@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+<h2>Registrar novo Usuário</h2>
+<form action="/register" method="POST">
+  <label for="fullname">Nome completo:</label>
+  <input type="text" id="fullname" name="fullname" required /><br />
+
+  <label for="username">Nome de usuário:</label>
+  <input type="text" id="username" name="username" required /><br />
+
+  <label for="email">E-mail:</label>
+  <input type="email" id="email" name="email" required /><br />
+
+  <label for="password">Senha:</label>
+  <input type="password" id="password" name="password" required /><br />
+
+  <label for="confirm_password">Confirmação de Senha:</label>
+  <input
+    type="password"
+    id="confirm_password"
+    name="confirm_password"
+    required
+  /><br />
+
+  <input type="submit" value="Registrar" />
+</form>
+{% endblock %}
